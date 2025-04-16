@@ -1,4 +1,9 @@
 # Dehazing Datasets
 
-- [RESIDE](https://sites.google.com/view/reside-dehaze-datasets)
-- [O-Haze](https://data.vision.ee.ethz.ch/cvl/ntire18/o-haze/)
+## RESIDE
+- ITS: Indoor Training Set
+- OTS: Outdoor Training Set
+- SOTS: Synthetic Test Set
+
+## O-Haze
+Real-world hazy/clean pairs

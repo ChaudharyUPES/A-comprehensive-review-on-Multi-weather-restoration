@@ -1,4 +1,7 @@
 # Desnowing Datasets
 
-- [CSD](https://github.com/weichen582/DesnowNet)
-- [Snow100K](https://github.com/ahmedghith/Snow100K)
+## Snow100K
+100K synthetic snow images (Light/Medium/Heavy)
+
+## CSD
+Controlled snow degradation dataset
