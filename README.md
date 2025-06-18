@@ -149,8 +149,3 @@ Pull requests are welcome for:
 - Fixing typos or reclassifications
 
 ---
-
-## 🙏 Acknowledgements
-
-This project was initiated at the Centre of Excellence in Computer Vision, UPES Dehradun.
----
