@@ -152,6 +152,5 @@ Pull requests are welcome for:
 
 ## 🙏 Acknowledgements
 
-This project was initiated at the Centre of Excellence in Computer Vision, [Your Institution], and supported by [Your Funding/Research Program].
-
+This project was initiated at the Centre of Excellence in Computer Vision, UPES Dehradun.
 ---
