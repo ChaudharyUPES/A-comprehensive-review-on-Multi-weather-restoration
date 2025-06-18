@@ -1,109 +1,157 @@
+# 🚗 Multi-Weather Restoration for Transportation: A Comprehensive Review
 
-# 🌦️ A Comprehensive Review on Multi-Weather Restoration
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ChaudharyUPES/A-comprehensive-review-on-Multi-weather-restoration/pulls)
+This repository accompanies the paper:
 
-> **This repository supports the review paper:  
-> _"Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation"_  
-> Submitted to IEEE Transactions on Intelligent Transportation Systems (T-ITS).**
+**“Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation”**  
+Submitted to *IEEE Transactions on Intelligent Transportation Systems*, 2025.
 
 ---
 
-## 🚀 Quick Start
+## 📄 Paper Summary
 
-### Installation
-
-```bash
-git clone https://github.com/ChaudharyUPES/A-comprehensive-review-on-Multi-weather-restoration.git
-cd A-comprehensive-review-on-Multi-weather-restoration
-pip install -r requirements.txt
-```
-
-### Example Usage
-
-```python
-from implementations.dehazing.dark_channel import dehaze
-
-# Process a hazy image
-dehaze("input/hazy.jpg", "output/clear.jpg")
-```
-
-### Benchmark Evaluation
-
-```bash
-python benchmarks/quantitative/evaluate.py --gt clean/ --results restored/
-```
+This work provides a comprehensive survey of restoration methods addressing various weather-induced degradations in images and videos, with a special focus on transportation use cases. We categorize methods based on the degradation type (haze, rain, snow, all-in-one, and multi-weather), discuss their strengths and limitations, present benchmarking datasets, and highlight future directions.
 
 ---
 
-## 🌟 Key Features
+## 📂 Categorized Papers
 
-- ✅ **140+ Reviewed Papers** organized by task and technique.
-- ✅ **Ready-to-Run Implementations:**
-  - Classic methods (e.g., Dark Channel Prior)
-  - Deep learning (e.g., Transformers, GANs)
-- ✅ **Standardized Benchmarks** for PSNR, SSIM, and perceptual metrics.
-- ✅ **Dataset summaries and loaders** for quick experimentation.
+### 🌫 Haze Removal
+
+| Paper            | Link                                                 |
+| ---------------- | ---------------------------------------------------- |
+| DehazeNet        | [IEEE TIP](https://doi.org/10.1109/TIP.2016.2537790) |
+| AOD-Net          | [IEEE TIP](https://doi.org/10.1109/TIP.2017.2735468) |
+| Haze-lines       | [CVPR](https://doi.org/10.1109/CVPR.2018.00667)      |
+| DCP              | [TPAMI](https://doi.org/10.1109/TPAMI.2009.161)      |
+| FFA-Net          | [ECCV](https://doi.org/10.1007/978-3-030-58545-7_15) |
+| Tan's Visibility | [IEEE TIP](https://doi.org/10.1109/TIP.2008.926798)  |
+| MSRCR Fusion     | [ICIP](#)                                            |
+| Restormer        | [ICCV](https://doi.org/10.1109/ICCV48922.2021.00468) |
+| FCANet           | [ACM MM](#)                                          |
+| FD-GAN           | [AAAI](#)                                            |
+
+### 🌧 Rain Removal
+
+| Paper          | Link |
+| -------------- | ---- |
+| JORDER         | [CVPR](https://doi.org/10.1109/CVPR.2017.561)       |
+| DDN            | [CVPR](https://doi.org/10.1109/CVPR.2017.8375215)   |
+| DID-MDN        | [CVPR](https://doi.org/10.1109/CVPR.2018.00611)     |
+| RESCAN         | [ECCV](https://doi.org/10.1007/978-3-030-01219-9_1) |
+| SPANet         | [ICCV](https://doi.org/10.1109/ICCV.2019.01220)     |
+| MSPFN          | [ICCV](#)                                           |
+| DerainCycleGAN | [CVPRW](#)                                          |
+| SmartAssign    | [CVPR](#)                                           |
+| Dual-GCN       | [TPAMI](#)                                          |
+| RIDNet         | [CVPRW](#)                                          |
+
+### ❄️ Snow Removal
+
+| Paper                 | Link |
+| --------------------- | ---- |
+| DesnowNet             | [ICASSP](#)          |
+| DesnowGAN             | [ECCV](#)            |
+| JSTASR                | [CVPR](#)            |
+| DesnowFormer          | [ICCV](#)            |
+| MSP-Former            | [CVPR](#)            |
+| SnowFormer            | [CVPR](#)            |
+| Invertible Separation | [NeurIPS](#)         |
+| FPGA Desnowing        | [TCSVT](#)           |
+| Marine Snow Removal   | [J. Oceanography](#) |
+
+### 🧠 All-in-One Restoration
+
+#### Prompt-Guided
+
+| Paper                 | Link |
+| --------------------- | ---- |
+| PromptIR              | [ICCV](#)  |
+| Language-Driven AIOIR | [ECCV](#)  |
+| DPMambaIR             | [arXiv](#) |
+
+#### Transformer-Based
+
+| Paper                 | Link |
+| --------------------- | ---- |
+| TransWeather          | [CVPR](https://doi.org/10.1109/CVPR.2022.00106) |
+| GridFormer            | [NeurIPS](#)                                    |
+| Frequency Transformer | [ECCV](#)                                       |
+
+#### Diffusion-Based
+
+| Paper                       | Link |
+| --------------------------- | ---- |
+| AutoDIR                     | [CVPR](#)  |
+| Visual-Instructed Diffusion | [ECCV](#)  |
+
+#### Others
+
+| Paper     | Link |
+| --------- | ---- |
+| WM-MoE    | [ICLR](#)  |
+| MAC-GAN   | [ICPR](#)  |
+| NAS-AIOIR | [AAAI](#)  |
+
+### ☂️ Multi-Weather Restoration
+
+#### Image
+
+| Paper                     | Link |
+| ------------------------- | ---- |
+| WEAFU                     | [CVPR](#)    |
+| MWFormer                  | [NeurIPS](#) |
+| Unified Transformer       | [ECCV](#)    |
+| Gated Context Aggregation | [TIP](#)     |
+| Weather General/Specific  | [CVPR](#)    |
+
+#### Video
+
+| Paper                | Link |
+| -------------------- | ---- |
+| Matrix Decomposition | [ICCV](#)    |
+| CANet                | [CVPR](#)    |
+| Dual Spatio-Temporal | [NeurIPS](#) |
+| Meta-Adaptation      | [CVPR](#)    |
 
 ---
 
-## 🗂️ Dataset Summary
-
-| Dataset         | Type  | Samples  | Resolution | Link     |
-|----------------|-------|----------|------------|----------|
-| RESIDE         | Haze  | 10,000+  | Up to 4K   | [Download](#) |
-| RainCityscapes | Rain  | 5,000    | 1920×1080  | [Download](#) |
-| Snow100K       | Snow  | 100,000  | 1024×768   | [Download](#) |
-
-> Refer to `datasets/README.md` for download links and instructions.
-
----
-
-## 🧪 Implemented Methods
-
-### 🔸 Dehazing
-- Dark Channel Prior
-- GridDehazeNet
-
-### 🔸 Video Restoration
-- Recurrent Video Deraining
-- Consolidated Adversarial Network
-
-> Organized by task in `implementations/`
-
----
-
-## 📜 Citation
-
-If you use this repository, please cite:
+## 🔹 Citation
 
 ```bibtex
-@article{multiweather2024,
-  title={Comprehensive Survey on Multi-Weather Image Restoration},
-  author={Chaudhary, Sachin and Co-authors},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  year={2024}
+@article{your2025paper,
+  title     = {Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation},
+  author    = {Your Name and Co-authors},
+  journal   = {IEEE Transactions on Intelligent Transportation Systems},
+  year      = {2025},
+  doi       = {YOUR_DOI_HERE}
 }
 ```
 
 ---
 
-## 🤝 Contributing
+## 💾 Dataset and Benchmark Tables
 
-1. Fork the repository  
-2. Create a new branch (`git checkout -b feature/new-method`)  
-3. Commit changes (`git commit -m "Add new method"`)  
-4. Push to branch (`git push origin feature/new-method`)  
-5. Open a Pull Request  
-
-> See `CONTRIBUTING.md` for guidelines
+- **Table I**: Haze restoration datasets
+- **Table II**: Rain removal datasets
+- **Table III**: Snow removal datasets
+- **Table IV**: All-in-One restoration benchmarks
+- **Table V**: Multi-weather restoration datasets
 
 ---
 
-## 📬 Contact
+## 📅 Contributing
 
-**Research Lead:**  
-**Sachin Chaudhary**  
-Computer Vision Group  
-University of Petroleum and Energy Studies  
-📧 sachin.chaudhary@upes.ac.in
+Pull requests are welcome for:
+
+- Adding newer restoration papers
+- Providing paper links (arXiv/DOI)
+- Improving benchmarks/tables
+- Fixing typos or reclassifications
+
+---
+
+## 🙏 Acknowledgements
+
+This project was initiated at the Centre of Excellence in Computer Vision, [Your Institution], and supported by [Your Funding/Research Program].
+
+---
