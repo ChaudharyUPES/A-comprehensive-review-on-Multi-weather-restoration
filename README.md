@@ -2,12 +2,6 @@
 
 ### 🌦️ A Comprehensive Review on Multi-Weather Restoration for Smart Transportation
 
-[![Paper Status](https://img.shields.io/badge/status-under%20review-yellow)](https://ieeexplore.ieee.org/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![View the PDF](https://img.shields.io/badge/Paper-PDF-blue)](https://doi.org/10.1109/TIP.2016.2537790)([https://your-paper-link-here.com](https://your-paper-link-here.com))
-
-### A Comprehensive Review on Multi-Weather Restoration for Transportation Applications
-
 Welcome to the official repository accompanying our survey paper:
 
 **“Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation”** &#x20;
