@@ -1,5 +1,10 @@
-# 🚗 Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation
+# 🚗 Clear Roads, Clear Vision
 
+### 🌦️ A Comprehensive Review on Multi-Weather Restoration for Smart Transportation
+
+[![Paper Status](https://img.shields.io/badge/status-under%20review-yellow)](https://ieeexplore.ieee.org/)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![View the PDF](https://img.shields.io/badge/Paper-PDF-blue)](https://doi.org/10.1109/TIP.2016.2537790)([https://your-paper-link-here.com](https://your-paper-link-here.com))
 
 ### A Comprehensive Review on Multi-Weather Restoration for Transportation Applications
 
@@ -10,13 +15,13 @@ Welcome to the official repository accompanying our survey paper:
 
 ---
 
-## 🧾 Overview
+## 📘 About This Repository
 
 This repository presents a curated collection of literature referenced in our comprehensive survey on image and video restoration methods for adverse weather conditions relevant to intelligent transportation. These methods tackle degradation caused by haze, rain, snow, or a combination of them using deep learning and classical techniques.
 
 ---
 
-## 🗂️ Categorized Literature by Restoration Focus
+## 📚 Categorized Restoration Literature
 
 ### 🌫 Haze Removal — Removing fog and haze to enhance visibility
 
@@ -118,7 +123,7 @@ This repository presents a curated collection of literature referenced in our co
 
 ---
 
-## 📌 How to Cite
+## ✍️ Citation
 
 ```bibtex
 @article{your2025paper,
@@ -132,17 +137,46 @@ This repository presents a curated collection of literature referenced in our co
 
 ---
 
-## 📊 Datasets and Benchmark Tables
+## 📈 Datasets & Benchmarks
 
-* **Table I**: Haze restoration datasets
-* **Table II**: Rain removal datasets
-* **Table III**: Snow removal datasets
-* **Table IV**: All-in-One restoration benchmarks
-* **Table V**: Multi-weather restoration datasets
+This section lists the commonly used datasets referenced in our survey for training and evaluating multi-weather restoration models.
+
+### 🌫 Haze Datasets
+
+* **RESIDE**: A benchmark dataset for single image dehazing with synthetic and real-world haze images. [Link](https://sites.google.com/view/reside-dehaze-datasets/)
+* **I-HAZE & O-HAZE**: Real hazy images captured under controlled settings. [Link](https://data.vision.ee.ethz.ch/cvl/ntire18/)
+
+### 🌧 Rain Datasets
+
+* **Rain100L / Rain100H**: Synthetic datasets containing light and heavy rain streaks. [Link](https://xueyangfu.github.io/projects/tip2017.html)
+* **DID-Data**: Dataset used for training DID-MDN, simulating various rain densities. [Link](https://github.com/hezhangsprinter/DID-MDN)
+
+### ❄️ Snow Datasets
+
+* **Snow100K**: A large-scale dataset with synthesized snowy images. [Link](https://github.com/yxuan0525/Snow100K)
+
+### 🧠 All-in-One and Multi-Weather Datasets
+
+* **DAWN**: Diverse Adverse Weather Needs dataset that includes haze, rain, and snow in a unified benchmark. [Link](https://github.com/vis-opt/DAWN)
+* **Realistic Multi-weather Dataset (RMWD)**: Contains videos and images under diverse real-world weather.
+
+### 🎞️ Video Datasets
+
+* **REVIDE**: Real-world video dehazing dataset. [Link](https://github.com/liruizhe/REVIDE)
+
+* **NTIRE Video Restoration Challenges**: Benchmarks for rain, snow, and haze video sequences. [Link](https://data.vision.ee.ethz.ch/cvl/ntire22/)
+
+* 📊 The repository groups restoration techniques by weather condition to match the structure of the original paper's benchmarking tables.
+
+* 📁 Each method is listed with its title and official source link (DOI, CVF, or arXiv).
+
+* 📈 Representative datasets for each degradation type are included for reproducibility and further research.
+
+* 📌 For full quantitative benchmarks and evaluations, refer to Tables I–V in the original paper.
 
 ---
 
-## 🤝 Contributing
+## 🤝 How to Contribute
 
 Pull requests are welcome for:
 
