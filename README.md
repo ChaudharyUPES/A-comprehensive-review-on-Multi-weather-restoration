@@ -1,4 +1,5 @@
-# 🚗 Multi-Weather Restoration for Transportation: A Comprehensive Review
+# 🚗 Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation
+Multi-Weather Restoration for Transportation: A Comprehensive Review
 
 This repository accompanies the paper:
 
@@ -118,7 +119,7 @@ This work provides a comprehensive survey of restoration methods addressing vari
 ## 🔹 Citation
 
 ```bibtex
-@article{your2025paper,
+@article{crcv2025,
   title     = {Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation},
   author    = {Your Name and Co-authors},
   journal   = {IEEE Transactions on Intelligent Transportation Systems},
