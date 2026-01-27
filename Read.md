@@ -1,71 +1,95 @@
-# 🚗 Clear Roads, Clear Vision
-### 🌦️ Multi-Weather Image & Video Restoration for Smart Transportation (Survey Companion)
+# 🚗 Clear Roads, Clear Vision  
+## 🌦️ Multi-Weather Image & Video Restoration for Smart Transportation (Survey Companion Repository)
 
 Welcome to the official repository accompanying our survey paper:
 
-**“Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation”**  
+**Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation**  
 Vijay M. Galshetwar, Praful Hambarde, Prashant W. Patil, Santosh Kumar Vipparathi, Akshay Dudhane, Subrahmanyam Murala, and Sachin Chaudhary  
-📌 *Manuscript submitted to IEEE Transactions on Intelligent Transportation Systems*  :contentReference[oaicite:1]{index=1}
+📌 *Manuscript submitted to IEEE Transactions on Intelligent Transportation Systems*
 
 ---
 
 ## 📘 About This Repository
 
-Adverse weather conditions such as **haze, rain, and snow** significantly degrade images/videos used in **Intelligent Transportation Systems (ITS)** (e.g., autonomous driving, traffic monitoring, surveillance). This repository provides a **curated, regularly updated companion** to our survey, including:
+Adverse weather conditions such as **haze, rain, and snow** significantly degrade image and video quality in Intelligent Transportation Systems (ITS), affecting:
 
-- Categorized literature: **prior-based → CNN/GAN → Transformer/SSM → Diffusion → Vision-Language (VLM)**
-- Restoration scope taxonomy: **single-task**, **multi-task/multi-weather**, **all-in-one**
-- **Day/night** and **image/video** restoration coverage
-- Datasets, evaluation metrics, and common loss functions (as summarized in the paper)  :contentReference[oaicite:2]{index=2}
+- Autonomous driving  
+- Traffic monitoring  
+- Surveillance  
+- Airport & port operations  
+
+This repository serves as a **living companion resource** to our survey paper and provides:
+
+- A structured taxonomy of restoration methods  
+- Curated literature lists  
+- Benchmark datasets  
+- Evaluation metrics and loss functions  
+- Emerging paradigms (Diffusion, Vision-Language Models, Agentic AI)
+
+The repository will be **continuously updated** with newly published papers and open-source implementations.
 
 ---
 
-## 🎯 Scope (as in the paper)
+## 🎯 Scope of the Survey (Aligned with the Paper)
 
-We cover restoration methods for:
-- **Dehazing**, **Deraining**, **Desnowing** (image + video)
-- **Multi-weather (multi-task)** restoration (haze/rain/snow jointly)
-- **All-in-one** restoration (weather + other degradations like noise/blur/low-light)
-- **Daytime & nighttime** restoration challenges
-- ITS-facing requirements: **robustness, real-time efficiency, temporal consistency**  :contentReference[oaicite:3]{index=3}
+We cover:
+
+### Weather-specific restoration
+- Dehazing  
+- Deraining  
+- Desnowing  
+
+### Restoration paradigms
+- **Single-task models**  
+- **Multi-task / Multi-weather models**  
+- **All-in-one restoration frameworks**
+
+### Modalities
+- Image restoration  
+- Video restoration  
+
+### Conditions
+- Daytime  
+- Nighttime  
+- Mixed / compound degradations  
 
 ---
 
-## 🧠 Taxonomy Used in This Repo
+## 🧠 Taxonomy of Methods
+
+Methods are categorized along two dimensions:
 
 ### A) By Restoration Scope
-1. **Single-task models** (specialized: haze OR rain OR snow)
-2. **Multi-task / Multi-weather models** (fine-tuned / evaluated across multiple weather types)
-3. **All-in-one models** (trained once on mixed degradations; deploy without task-specific tuning)  :contentReference[oaicite:4]{index=4}
+1. **Single-task models** (haze / rain / snow separately)  
+2. **Multi-weather models** (joint haze–rain–snow learning)  
+3. **All-in-one models** (weather + noise, blur, low-light, etc.)
 
 ### B) By Model Family
-- Traditional / Prior-based
-- CNN / GAN
-- Transformer
-- State Space Models (SSM/Mamba)
-- Diffusion / Generative
-- Vision-Language Models (VLM) & prompt-based
-- Agentic / planning-driven restoration (emerging)  :contentReference[oaicite:5]{index=5}
+- Prior-based & traditional methods  
+- CNN / GAN-based methods  
+- Transformer-based methods  
+- State Space Models (SSM / Mamba)  
+- Diffusion & generative models  
+- Vision-Language & prompt-based models  
+- Agentic AI & planning-driven frameworks  
 
 ---
 
 ## 📚 Categorized Restoration Literature
 
-> **Note:** The lists below are representative (as in your current README).  
-> We are aligning the full repo to the paper’s structure and will expand these into dedicated files/tables.
+> Representative examples from the survey (full lists will be expanded into structured tables).
 
-### 🌫️ Dehazing (Image/Video)
+### 🌫️ Dehazing (Image & Video)
 | Paper Title | Link |
 | --- | --- |
 | DehazeNet: An End-to-End System for Single Image Haze Removal | https://doi.org/10.1109/TIP.2016.2537790 |
 | AOD-Net: All-in-One Dehazing Network | https://doi.org/10.1109/TIP.2017.2735468 |
 | Single Image Haze Removal Using Dark Channel Prior | https://doi.org/10.1109/TPAMI.2009.161 |
 | Restormer: Efficient Transformer for High-Resolution Image Restoration | https://doi.org/10.1109/ICCV48922.2021.00468 |
-| FFA-Net: Feature Fusion Attention Network for Single Image Dehazing | https://doi.org/10.1007/978-3-030-58545-7_15 |
 
 ---
 
-### 🌧️ Deraining (Image/Video)
+### 🌧️ Deraining (Image & Video)
 | Paper Title | Link |
 | --- | --- |
 | Deep Joint Rain Detection and Removal from a Single Image | https://doi.org/10.1109/CVPR.2017.561 |
@@ -75,7 +99,7 @@ We cover restoration methods for:
 
 ---
 
-### ❄️ Desnowing (Image/Video)
+### ❄️ Desnowing (Image & Video)
 | Paper Title | Link |
 | --- | --- |
 | DesnowNet: Context-Aware Deep Network for Snow Removal | https://doi.org/10.1109/TIP.2017.2735474 |
@@ -104,64 +128,67 @@ We cover restoration methods for:
 
 ## 🧠 All-in-One Restoration (Unified Degradation Handling)
 
-### Prompt / Language Guided
-| Paper Title | Link |
-| --- | --- |
-| PromptIR: Prompting for All-in-One Image Restoration | https://proceedings.neurips.cc/paper_files/paper/2023/hash/2e9f1b0b25b8e9c3d2a6a87a8b3d3e0f-Abstract-Conference.html |
-| Language-Driven All-in-One Restoration | https://arxiv.org/abs/2402.01149 |
-| DPMambaIR: Degradation-Aware Prompt State Space Model | https://arxiv.org/abs/2403.15459 |
+### Prompt / Language-Guided
+- PromptIR  
+- Language-Driven All-in-One Restoration  
+- DPMambaIR  
 
 ### Transformer / Diffusion / Others
-| Paper Title | Link |
-| --- | --- |
-| TransWeather: Transformer-based Restoration of Images Degraded by Adverse Weather | https://doi.org/10.1109/CVPR.2022.00106 |
-| AutoDIR: Automatic All-in-One Image Restoration with Latent Diffusion | https://arxiv.org/abs/2311.17028 |
-| NAS-AIOIR: All in One Bad Weather Removal Using Architectural Search | https://openaccess.thecvf.com/content_CVPR_2020/html/Li_All_in_One_Bad_Weather_Removal_Using_Architectural_Search_CVPR_2020_paper.html |
+- TransWeather  
+- AutoDIR  
+- NAS-AIOIR  
+- Weather-Aware Mixture-of-Experts  
 
 ---
 
-## 📈 Datasets & Benchmarks (Aligned with the Paper)
+## 📊 Datasets & Benchmarks (from the Paper)
 
-We summarize benchmark datasets (synthetic & real) and evaluation protocols as detailed in the survey:
-- **Dehazing datasets** (Table I)
-- **Deraining datasets** (Table II)
-- **Desnowing datasets** (Table III)  :contentReference[oaicite:6]{index=6}
+Benchmark datasets summarized in the survey:
+- **Dehazing:** RESIDE, Dense-Haze, NH-HAZE, REVIDE, Night-Haze  
+- **Deraining:** Rain100H/L, DID-Data, RainCityscapes, RTTS  
+- **Desnowing:** Snow100K, SRRS, SnowCityscapes, SnowKITTI  
 
-**Planned repo structure (coming as separate pages):**
-- `datasets/dehazing.md`
-- `datasets/deraining.md`
-- `datasets/desnowing.md`
-- `benchmarks/image_results.md`
-- `benchmarks/video_results.md`
+Planned repo pages:
+- `datasets/dehazing.md`  
+- `datasets/deraining.md`  
+- `datasets/desnowing.md`  
+- `benchmarks/image_results.md`  
+- `benchmarks/video_results.md`  
 
 ---
 
 ## 📏 Metrics & 🧮 Loss Functions
 
-As covered in the paper:
-- **Reference metrics:** PSNR, SSIM, LPIPS, FID
-- **No-reference metrics:** NIQE, BRISQUE, PIQE, Entropy
-- **Video stability / temporal:** temporal warping error (TWE), inter-frame consistency
-- **Common losses:** L1/L2/Charbonnier, edge loss, perceptual loss, adversarial loss, weather classification loss  :contentReference[oaicite:7]{index=7}
+### Metrics
+- PSNR, SSIM, LPIPS, FID  
+- NIQE, BRISQUE, PIQE, Entropy  
+- Temporal Warping Error (TWE)  
 
-(Repo page planned: `losses_and_metrics.md`)
+### Losses
+- L1 / L2 / Charbonnier  
+- Edge loss  
+- Perceptual loss  
+- Adversarial loss  
+- Weather classification loss  
 
 ---
 
 ## 🤖 Emerging Direction: Agentic AI Restoration
 
-The survey highlights a shift toward **planning-driven / agent-based restoration** for compound degradations and better generalization, including multi-agent scheduling and LLM-guided restoration pipelines.  :contentReference[oaicite:8]{index=8}
+Recent work highlights **planning-driven and multi-agent restoration frameworks**:
+- LLM-guided restoration  
+- Multi-agent scheduling  
+- Compound degradation handling  
+- Zero-shot generalization  
 
-(Repo page planned: `agentic_ai.md`)
+This represents a key future direction for scalable and robust restoration in real-world ITS environments.
 
 ---
 
 ## ✍️ Citation
 
-If you use this repository, please cite:
-
 ```bibtex
-@article{clearroads_clearvision_multiweather_restoration,
+@article{clearroads_multiweather_restoration,
   title   = {Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation},
   author  = {Galshetwar, Vijay M. and Hambarde, Praful and Patil, Prashant W. and Vipparathi, Santosh Kumar and Dudhane, Akshay and Murala, Subrahmanyam and Chaudhary, Sachin},
   journal = {IEEE Transactions on Intelligent Transportation Systems},
