@@ -1,5 +1,10 @@
 # 🚗 Clear Roads, Clear Vision  
-## 🌦️ Multi-Weather Image & Video Restoration for Smart Transportation (Survey Companion Repository)
+## 🌦️ Multi-Weather Image & Video Restoration for Smart Transportation  
+### (Survey Companion Repository)
+
+![Survey](https://img.shields.io/badge/Type-Survey-blue)
+![Status](https://img.shields.io/badge/Status-Under%20Review-orange)
+![Domain](https://img.shields.io/badge/Domain-Intelligent%20Transportation-green)
 
 Welcome to the official repository accompanying our survey paper:
 
@@ -27,6 +32,15 @@ This repository serves as a **living companion resource** to our survey paper an
 - Emerging paradigms (Diffusion, Vision-Language Models, Agentic AI)
 
 The repository will be **continuously updated** with newly published papers and open-source implementations.
+
+---
+
+## 📖 How to Use This Repository
+
+- Explore restoration methods using the taxonomy (by task and by model family).  
+- Refer to dataset pages for benchmarking and reproducibility.  
+- Use metrics and loss-function summaries for experimental design.  
+- Contribute newly published papers and datasets via pull requests.
 
 ---
 
@@ -77,9 +91,13 @@ Methods are categorized along two dimensions:
 
 ## 📚 Categorized Restoration Literature
 
-> Representative examples from the survey (full lists will be expanded into structured tables).
+> The tables below provide **representative examples** from each category.  
+> Full paper lists will be expanded into structured tables in dedicated subpages.
+
+---
 
 ### 🌫️ Dehazing (Image & Video)
+
 | Paper Title | Link |
 | --- | --- |
 | DehazeNet: An End-to-End System for Single Image Haze Removal | https://doi.org/10.1109/TIP.2016.2537790 |
@@ -90,6 +108,7 @@ Methods are categorized along two dimensions:
 ---
 
 ### 🌧️ Deraining (Image & Video)
+
 | Paper Title | Link |
 | --- | --- |
 | Deep Joint Rain Detection and Removal from a Single Image | https://doi.org/10.1109/CVPR.2017.561 |
@@ -100,6 +119,7 @@ Methods are categorized along two dimensions:
 ---
 
 ### ❄️ Desnowing (Image & Video)
+
 | Paper Title | Link |
 | --- | --- |
 | DesnowNet: Context-Aware Deep Network for Snow Removal | https://doi.org/10.1109/TIP.2017.2735474 |
@@ -111,6 +131,7 @@ Methods are categorized along two dimensions:
 ## ☂️ Multi-Weather Restoration (Multi-task)
 
 ### Image
+
 | Paper Title | Link |
 | --- | --- |
 | MWFormer: Multi-weather Transformer | https://arxiv.org/abs/2312.12967 |
@@ -118,6 +139,7 @@ Methods are categorized along two dimensions:
 | General/Specific Weather Restoration Framework | https://arxiv.org/abs/2308.12241 |
 
 ### Video
+
 | Paper Title | Link |
 | --- | --- |
 | Video Restoration via Matrix Decomposition | https://ieeexplore.ieee.org/document/9093415 |
@@ -144,11 +166,12 @@ Methods are categorized along two dimensions:
 ## 📊 Datasets & Benchmarks (from the Paper)
 
 Benchmark datasets summarized in the survey:
+
 - **Dehazing:** RESIDE, Dense-Haze, NH-HAZE, REVIDE, Night-Haze  
 - **Deraining:** Rain100H/L, DID-Data, RainCityscapes, RTTS  
 - **Desnowing:** Snow100K, SRRS, SnowCityscapes, SnowKITTI  
 
-Planned repo pages:
+Planned repository pages:
 - `datasets/dehazing.md`  
 - `datasets/deraining.md`  
 - `datasets/desnowing.md`  
@@ -164,7 +187,7 @@ Planned repo pages:
 - NIQE, BRISQUE, PIQE, Entropy  
 - Temporal Warping Error (TWE)  
 
-### Losses
+### Loss Functions
 - L1 / L2 / Charbonnier  
 - Edge loss  
 - Perceptual loss  
@@ -192,6 +215,6 @@ This represents a key future direction for scalable and robust restoration in re
   title   = {Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation},
   author  = {Galshetwar, Vijay M. and Hambarde, Praful and Patil, Prashant W. and Vipparathi, Santosh Kumar and Dudhane, Akshay and Murala, Subrahmanyam and Chaudhary, Sachin},
   journal = {IEEE Transactions on Intelligent Transportation Systems},
-  year    = {2026},
-  note    = {Manuscript submitted}
+  note    = {Under review},
+  year    = {2025}
 }
