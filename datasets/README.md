@@ -1,107 +1,144 @@
-# 🌦️ Multi-Weather Datasets
+# 📊 Datasets for Multi-Weather Image & Video Restoration
 
-This section includes curated datasets for haze, rain, snow, and multi-weather conditions used in benchmarking image restoration models for transportation and adverse weather scenarios.
+This directory provides curated benchmark datasets used in the survey:
+
+**Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation**  
+(arXiv:2510.09228)
+
+The datasets cover adverse weather conditions relevant to Intelligent Transportation Systems (ITS), including:
+
+- 🌫️ Haze  
+- 🌧️ Rain  
+- ❄️ Snow  
+- ☂️ Multi-weather / compound degradations  
+- 🎞️ Video restoration  
+
+This folder serves as the **practical companion** to the academic dataset summaries:
+- [dehazing.md](dehazing.md)  
+- [deraining.md](deraining.md)  
+- [desnowing.md](desnowing.md)  
+- [multiweather.md](multiweather.md)  
+
+and provides:
+- download scripts  
+- preprocessing utilities  
+- dataset organization guidelines  
+
+---
+
+## 📌 Dataset Categories
+
+| Category | Description |
+|----------|-------------|
+| **Dehazing** | Image and video datasets with fog and haze degradation |
+| **Deraining** | Synthetic and real rainy image datasets |
+| **Desnowing** | Snow-covered scenes with paired or unpaired ground truth |
+| **Multi-weather** | Compound degradations (haze + rain + snow) |
+| **Video restoration** | Sequential benchmarks for temporal consistency |
 
 ---
 
 ## 📥 Download Instructions
 
-Each dataset has a helper script to download and organize the files in the correct folder structure.
+Each dataset category provides helper scripts to download and organize data automatically.
 
-### 🔸 Dehazing
-
+### 🌫️ Dehazing
 ```bash
 bash datasets/dehazing/download_reside.sh
+
 ```
-
-### 🔸 Deraining
-
+### 🌧️ Deraining
 ```bash
-bash datasets/deraining/download_rain.sh
+datasets/deraining/download_rain.sh
 ```
 
-### 🔸 Desnowing
-
+### ❄️ Desnowing
 ```bash
 bash datasets/desnowing/download_snow.sh
 ```
 
-### 🔸 Multi-Weather Combined
-
+### ☂️ Multi-Weather
 ```bash
-bash datasets/multi-weather/download_multi.sh
+bash datasets/multiweather/download_multi.sh
 ```
+
+> 📌 Please ensure sufficient disk space before downloading large-scale datasets (e.g., Snow100K, DAWN).
 
 ---
 
 ## ⚙️ Preprocessing Scripts
 
-For certain datasets (e.g., RainCityscapes), preprocessing may be required such as resizing or patch extraction:
+Some datasets require preprocessing (e.g., resizing, patch extraction, or format conversion):
 
 ```bash
-# Resize images or convert to model-compatible format
 python datasets/deraining/preprocess.py
 ```
+
+Typical preprocessing steps include:
+- Image resizing  
+- Patch extraction  
+- Normalization  
+- Train/test split generation  
+
+Dataset-specific preprocessing instructions are provided inside each dataset subfolder.
 
 ---
 
 ## 📊 Dataset Summary
 
-### 🌫 Haze Datasets
+### 🌫️ Haze Datasets
 
-| Dataset         | Type           | Samples  | Resolution | Citation                                                                 |
-| --------------- | -------------- | -------- | ---------- | ------------------------------------------------------------------------ |
-| RESIDE          | Synthetic Hazy | \~13,990 | 620×460    | [Li et al., 2018](https://sites.google.com/view/reside-dehaze-datasets/) |
-| I-HAZE / O-HAZE | Real Hazy      | 35 / 45  | 1280×720   | [Ancuti et al., 2018](https://data.vision.ee.ethz.ch/cvl/ntire18/)       |
-| HazeRD          | Real Hazy      | 2,220    | Varies     | [Zhang et al., 2017](https://github.com/ygjwd12345/HazeRD)               |
-| D-HAZY          | Depth-Hazy     | 1,449    | 640×480    | [Ancuti et al., 2016](https://www.ut.ee/~dch/d-hazy/)                    |
+| Dataset | Type | Samples | Resolution | Reference |
+|--------|------|---------|------------|-----------|
+| RESIDE | Synthetic / Real | ~13,990 | 620×460 | https://sites.google.com/view/reside-dehaze-datasets |
+| I-HAZE | Real | 35 | 1280×720 | https://data.vision.ee.ethz.ch/cvl/ntire18/ |
+| O-HAZE | Real | 45 | 1280×720 | https://data.vision.ee.ethz.ch/cvl/ntire18/ |
+| Dense-Haze | Real | 33 | 2048×1536 | https://data.vision.ee.ethz.ch/cvl/ntire19/dense-haze/ |
+| NH-HAZE | Night-time Real | 55 | 2048×1536 | https://data.vision.ee.ethz.ch/cvl/ntire20/nh-haze/ |
 
-### 🌧 Rain Datasets
+---
 
-| Dataset        | Type                   | Samples | Resolution | Citation                                                               |
-| -------------- | ---------------------- | ------- | ---------- | ---------------------------------------------------------------------- |
-| Rain100H       | Synthetic Rain         | 1,800   | 512×512    | [Yang et al., 2017](https://xueyangfu.github.io/projects/tip2017.html) |
-| Rain100L       | Synthetic Rain (Light) | 200     | 512×512    | [Yang et al., 2017](https://xueyangfu.github.io/projects/tip2017.html) |
-| Rain800        | Synthetic Rain         | 800     | 500×500    | [Zhang et al., 2019](https://github.com/hezhangsprinter/DID-MDN)       |
-| RainCityscapes | Synthetic Rain         | \~5,000 | 1920×1080  | [Hu et al., 2019](https://xiaoyonghu.com/project/derain.html)          |
-| DID-Data       | Rainy (Density)        | 12,000  | 512×512    | [Zhang et al., 2018](https://github.com/hezhangsprinter/DID-MDN)       |
+### 🌧️ Rain Datasets
+
+| Dataset | Type | Samples | Resolution | Reference |
+|--------|------|---------|------------|-----------|
+| Rain100H | Synthetic Rain (Heavy) | 1,800 | 512×512 | https://xueyangfu.github.io/projects/tip2017.html |
+| Rain100L | Synthetic Rain (Light) | 200 | 512×512 | https://xueyangfu.github.io/projects/tip2017.html |
+| RainCityscapes | Synthetic Rain | ~5,000 | 1920×1080 | https://xiaoyonghu.com/project/derain.html |
+| DID-Data | Density-aware Rain | 12,000 | 512×512 | https://github.com/hezhangsprinter/DID-MDN |
+
+---
 
 ### ❄️ Snow Datasets
 
-| Dataset  | Type             | Samples | Resolution | Citation                                                  |
-| -------- | ---------------- | ------- | ---------- | --------------------------------------------------------- |
-| Snow100K | Synthetic Snow   | 100,000 | 1024×768   | [Liu et al., 2019](https://github.com/yxuan0525/Snow100K) |
-| CSD      | Real + Synthetic | 13,000  | 720×480    | [Liu et al., 2022](https://arxiv.org/abs/2206.10972)      |
+| Dataset | Type | Samples | Resolution | Reference |
+|--------|------|---------|------------|-----------|
+| Snow100K | Synthetic Snow | 100,000 | 1024×768 | https://github.com/yxuan0525/Snow100K |
+| CSD | Real + Synthetic | 13,000 | 720×480 | https://arxiv.org/abs/2206.10972 |
 
-### 🧠 All-in-One / Blur Datasets
-
-| Dataset | Type                 | Samples | Resolution | Citation                                                                                                                           |
-| ------- | -------------------- | ------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| BID     | Blurred (All-in-One) | 586     | 700×700    | [Caraffa et al., 2015](https://openaccess.thecvf.com/content_cvpr_2015/html/Caraffa_Multi-View_Structure_And_2015_CVPR_paper.html) |
+---
 
 ### ☂️ Multi-Weather Datasets
 
-| Dataset      | Type          | Samples | Resolution | Citation                                             |
-| ------------ | ------------- | ------- | ---------- | ---------------------------------------------------- |
-| DAWN         | Multi-Weather | 10,000  | Varies     | [Wang et al., 2022](https://github.com/vis-opt/DAWN) |
-| Realistic MW | Multi-Weather | 2,500+  | Varies     | –                                                    |
+| Dataset | Type | Samples | Resolution | Reference |
+|--------|------|---------|------------|-----------|
+| DAWN | Multi-weather | 10,000 | Varies | https://github.com/vis-opt/DAWN |
+| Realistic MW | Multi-weather | 2,500+ | Varies | — |
+
+---
 
 ### 🎞️ Video Datasets
 
-| Dataset   | Type                | Samples | Resolution | Citation                                                        |
-| --------- | ------------------- | ------- | ---------- | --------------------------------------------------------------- |
-| REVIDE    | Real Video Dehazing | 500+    | 720×480    | [Li et al., 2021](https://github.com/liruizhe/REVIDE)           |
-| NTIRE2021 | Video (Multi-Type)  | 1,000+  | Varies     | [Nah et al., 2021](https://data.vision.ee.ethz.ch/cvl/ntire21/) |
-
-> 📝 *More details such as splits, augmentation, and usage guidelines are available in each dataset subfolder.*
+| Dataset | Type | Samples | Resolution | Reference |
+|--------|------|---------|------------|-----------|
+| REVIDE | Real Video Dehazing | 500+ | 720×480 | https://github.com/liruizhe/REVIDE |
+| NTIRE Video Challenges | Multi-type | 1,000+ | Varies | https://data.vision.ee.ethz.ch/cvl/ntire22/ |
 
 ---
 
 ## 📁 Folder Structure
 
-Place all downloaded datasets in the following directory layout:
-
-```plaintext
+```text
 datasets/
 ├── dehazing/
 │   └── RESIDE/
@@ -109,8 +146,55 @@ datasets/
 │   └── RainCityscapes/
 ├── desnowing/
 │   └── Snow100K/
-└── multi-weather/
+└── multiweather/
     └── DAWN/
 ```
 
-> 📌 For dataset licenses and citation formats, refer to the `README.md` inside each dataset subfolder.
+Each dataset subfolder should contain:
+- Original data  
+- Preprocessing scripts  
+- A local `README.md` with license and citation  
+
+---
+
+## ⚠️ Licensing & Usage
+
+Each dataset is distributed under its own license defined by the original authors.
+
+Users must:
+- Follow dataset-specific license terms  
+- Cite the corresponding papers  
+- Use the data for research and non-commercial purposes unless explicitly permitted  
+
+Please refer to the `README.md` inside each dataset directory for detailed license information.
+
+---
+
+## 🔗 Related Pages
+- [taxonomy.md](../taxonomy.md)  
+- [datasets/dehazing.md](dehazing.md)  
+- [datasets/deraining.md](deraining.md)  
+- [datasets/desnowing.md](desnowing.md)  
+- [datasets/multiweather.md](multiweather.md)  
+- [benchmarks/image_results.md](../benchmarks/image_results.md)  
+
+---
+
+## 📌 Citation
+
+```bibtex
+@article{clearroads_multiweather_restoration,
+  title   = {Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation},
+  author  = {Galshetwar, Vijay M. and Hambarde, Praful and Patil, Prashant W. and Vipparathi, Santosh Kumar and Dudhane, Akshay and Murala, Subrahmanyam and Chaudhary, Sachin},
+  journal = {arXiv preprint arXiv:2510.09228},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2510.09228}
+}
+```
+
+---
+
+## ⭐ Acknowledgment
+
+We gratefully acknowledge the authors and dataset contributors whose open benchmarks enable progress in multi-weather image and video restoration research.
+
