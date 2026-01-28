@@ -3,7 +3,6 @@
 
 ## 📄 Benchmark Files
 
-### 🖼️ `image_results.md`
 Contains representative **quantitative benchmark results** for image-based restoration methods, organized by task:
 
 - Dehazing  
